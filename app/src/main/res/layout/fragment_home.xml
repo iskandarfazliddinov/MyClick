@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F302E"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="16dp"
+        app:cardCornerRadius="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="Qolgan mablag`i:"
+                android:textColor="#5AA91B"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="400 000"
+                android:textColor="#5AA91B"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBarHom"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="12dp"
+                android:progress="45"
+                android:progressTint="#4CAF50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/tvProg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 000"
+                android:textColor="#5AA91B"
+                app:layout_constraintStart_toStartOf="@+id/progressBarHom"
+                app:layout_constraintTop_toBottomOf="@+id/progressBarHom" />
+
+            <TextView
+                android:id="@+id/tvMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400 000"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="@id/progressBarHom"
+                app:layout_constraintTop_toBottomOf="@+id/progressBarHom" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#5B5B5B"
+        app:cardCornerRadius="12dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="Harajat qo’shish"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnAdds"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardCornerRadius="56dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/addicons" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iconEmp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:src="@drawable/money_icon"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="?actionBarSize"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_recyc" />
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

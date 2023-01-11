@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="252dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:background="#5AA91B"
+                android:gravity="center"
+                android:text="Rasm tanlash"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/btnCameraOpen"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:background="#FF7917"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="12dp"
+                    android:src="@drawable/ic_baseline_camera_alt_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="84dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Cameradan yuklash"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnGallOpen"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:background="#5AA91B"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="12dp"
+                    android:src="@drawable/ic_baseline_broken_image_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="84dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Gallerydan yuklash"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
